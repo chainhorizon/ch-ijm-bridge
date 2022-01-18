@@ -1,0 +1,407 @@
+/*
+https://github.com/Hanul/sky-css-base
+v0.0.1 | 20210109
+Author: Sim Young Jae
+License: MIT
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*:focus {
+  outline: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+[hidden] {
+  display: none !important;
+}
+[contenteditable] {
+  -webkit-tap-highlight-color: transparent;
+}
+.float-wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-Regular.ttf") format("ttf");
+}
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
+  padding: 20px;
+  max-width: 690px;
+  margin: auto;
+}
+body > h1 > .logo {
+  text-align: center;
+  font-size: 62px;
+  padding-top: 16px;
+}
+body > h1 > .ijm {
+  text-align: center;
+  width: 100%;
+  margin-top: 4px;
+  font-size: 25px;
+  padding-bottom: 16px;
+  background: #F7DEA5;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body > h1 > .ijm :hover {
+  font-weight: bold;
+}
+body > h1 > .ijm > a {
+  margin-right: 4px;
+}
+body > .warning {
+  font-size: 0.875rem;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  line-height: 2em;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+footer {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 32px;
+}
+footer > .social {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+footer > .social > .item {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.swaper > .form-container {
+  margin-top: 20px;
+}
+.swaper > .form-container:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.swaper > .form-container > .arrow {
+  float: left;
+  margin-top: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .swaper > .form-container > .arrow {
+    display: none;
+  }
+}
+.swaper > .form-container > .mobile-arrow {
+  display: none;
+  transform: rotate(90deg);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 719px) {
+  .swaper > .form-container > .mobile-arrow {
+    display: block;
+  }
+}
+.swaper > .form-container > .form {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 280px;
+  min-height: 240px;
+  background-color: #1f1f1f;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 16px;
+}
+.swaper > .form-container > .form > .chain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swaper > .form-container > .form > .chain > .icon > img {
+  display: block;
+  margin-right: 8px;
+}
+.swaper > .form-container > .form > .chain > select {
+  flex-grow: 1;
+  font-size: 14px;
+  height: 32px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 4px;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+  border: none;
+}
+.swaper > .form-container > .form > .chain > .help-text {
+  font-size: 16px;
+  margin-left: 8px;
+}
+.swaper > .form-container > .form > .balance {
+  font-size: 14px;
+  text-align: right;
+}
+.swaper > .form-container > .form > .input-container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.swaper > .form-container > .form > .input-container > input {
+  padding: 4px;
+  width: 100%;
+  height: 48px;
+  font-size: 14px;
+  background-color: #313131;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 8px;
+}
+.swaper > .form-container > .form > .button-container > .add-token-to-wallet-button {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 4px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.67);
+}
+.swaper > .form-container > .form > .button-container > .add-token-to-wallet-button:hover {
+  color: #be9f64;
+}
+.swaper > .form-container > .form > .button-container > .connect-button,
+.swaper > .form-container > .form > .button-container > .send-button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #F7DEA5;
+  color: #000;
+  font-weight: bold;
+}
+.swaper > .form-container > .form > .button-container > .connect-button,
+.swaper > .form-container > .form > .button-container > .send-button:hover {
+  background: #F7DEA5;
+}
+@media only screen and (max-width: 719px) {
+  .swaper > .form-container > .form {
+    float: none;
+    width: auto;
+  }
+}
+.swaper > .history {
+  margin-top: 20px;
+  background-color: #1f1f1f;
+  color: rgba(255, 255, 255, 0.87);
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  padding: 10px;
+  height: 160px;
+  border-radius: 8px;
+}
+.swaper > .history > h2 {
+  padding: 8px;
+  padding-left: 0px;
+  font-size: 16px;
+  position: sticky;
+}
+.swaper > .history > h2 > .divider {
+  border: 0.5px solid #e5e5e5;
+}
+.swaper > .history > .sended-list {
+  margin-top: 8px;
+}
+.swaper > .history > .sended-list > .sended {
+  padding: 5px 0;
+}
+.swaper > .history > .sended-list > .sended:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.swaper > .history > .sended-list > .sended > .message {
+  float: left;
+}
+.swaper > .history > .sended-list > .sended > .done,
+.swaper > .history > .sended-list > .sended > .retry-button {
+  float: right;
+}
+.swaper > .history > .sended-list > .sended > .retry-button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #F7DEA5;
+  color: #000;
+}
+
