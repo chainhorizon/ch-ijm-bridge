@@ -22,7 +22,7 @@ class BSCWallet extends EventContainer {
                 this.fireEvent("chainchange", BigNumber.from(chainId).toNumber());
             });
         } else {
-            this.walletConnectProvider = new WalletConnectProvider({ rpc: "wss://bsc-ws-node.nariox.org:443" });
+            this.walletConnectProvider = new WalletConnectProvider({ rpc: "https://bsc-dataseed.binance.org" });
             this.provider = new ethers.providers.Web3Provider(this.walletConnectProvider);
             this.walletConnectProvider.on("chainChanged", (chainId: number) => {
                 this.fireEvent("chainchange", chainId);

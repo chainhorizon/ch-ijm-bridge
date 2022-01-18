@@ -3,12 +3,12 @@ import EventContainer from "eventcontainer";
 
 class BSCNetworkProvider extends EventContainer {
 
-    public provider: ethers.providers.WebSocketProvider;
+    public provider: ethers.providers.JsonRpcProvider;
     public signer: ethers.providers.JsonRpcSigner;
 
     constructor() {
         super();
-        this.provider = new ethers.providers.WebSocketProvider("wss://bsc-ws-node.nariox.org:443");
+        this.provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed.binance.org");
         this.signer = this.provider.getSigner(ethers.constants.AddressZero);
     }
 
