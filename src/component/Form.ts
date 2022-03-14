@@ -24,9 +24,8 @@ export default class Form extends DomNode {
         super(".form");
         this.append(
             el(".chain",
-                el(".icon",
-                    this.chainIcon = el("img", { height: "24" }),
-                ),
+                this.chainIcon = el("img", { alt: "chain logo" }),
+                isFrom ? el("p", "FROM") : el("p.help-text", "TO"),
                 this.chainSelect = el(
                     "select",
                     el("option", "Klaytn", {
@@ -49,7 +48,6 @@ export default class Form extends DomNode {
                         },
                     }
                 ) as any,
-                isFrom ? el("span.help-text", "에서") : el("span.help-text", "으로")
             ),
             (this.balanceDisplay = el(".balance")),
             (this.inputContainer = el(".input-container")),
@@ -68,16 +66,16 @@ export default class Form extends DomNode {
 
         if (chainId === 8217) {
             this.sender = InjeolmiSenderContract;
-            this.chainIcon.domElement.src = "/images/klaytn-logo.png";
+            this.chainIcon.domElement.src = "/images/shared/icn/icn-klaytn.svg";
         } else if (chainId === 56) {
             this.sender = BSCInjeolmiContract;
-            this.chainIcon.domElement.src = "/images/bsc-logo.png";
+            this.chainIcon.domElement.src = "/images/shared/icn/icn-bsc.svg";
         } else if (chainId === 1) {
             this.sender = EthereumInjeolmiContract;
-            this.chainIcon.domElement.src = "/images/ethereum-logo.png";
+            this.chainIcon.domElement.src = "/images/shared/icn/icn-ethereum.svg";
         } else if (chainId === 137) {
             this.sender = PolygonInjeolmiContract;
-            this.chainIcon.domElement.src = "/images/polygon-logo.png";
+            this.chainIcon.domElement.src = "/images/shared/icn/icn-polygon.svg";
         }
         await this.loadBalance();
 
