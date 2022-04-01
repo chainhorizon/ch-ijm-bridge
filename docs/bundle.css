@@ -369,8 +369,9 @@ body {
   padding: 8px 0px;
 }
 .swaper > .history > .sended-list {
-  width: 100%;
+  width: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 .swaper > .history > .sended-list > .sended {
