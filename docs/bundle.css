@@ -318,6 +318,11 @@ body {
   text-align: center;
   font-size: 12px;
 }
+@media only screen and (max-width: 719px) {
+  .swaper > .warning {
+    width: 90%;
+  }
+}
 .swaper > .warning > img {
   margin-right: 4px;
 }
