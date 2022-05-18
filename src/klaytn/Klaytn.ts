@@ -1,6 +1,6 @@
 class Klaytn {
 
-    private caver = new (window as any).Caver(new (window as any).Caver.providers.WebsocketProvider("wss://klaytn-node.klu.bs:9091", {
+    public caver = new (window as any).Caver(new (window as any).Caver.providers.WebsocketProvider("wss://klaytn01.fandom.finance/ws/", {
         reconnect: {
             auto: true,
             delay: 1000,
